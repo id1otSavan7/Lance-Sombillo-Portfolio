@@ -15,7 +15,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    clear: both;
+    text-align: justify;
 }
 
 /*--- STYLE: MENU BAR ---*/
@@ -29,7 +29,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.6);
 }
 
-.menu-bar .menu-title {
+.menu-title {
     float: left;
     padding-top: 10px;
 }
@@ -44,11 +44,8 @@ body {
     font-size: 1.6rem;
     font-weight: bold;
 }
-
-.menu-bar .menu-option {
+.menu-option {
     float: right;
-    width: 800px;
-    margin-left: auto;
 }
 
 .menu-option ul {
@@ -64,11 +61,8 @@ body {
 .menu-option ul li a {
     display: flex;
     text-decoration: none;
-    margin: 1px;
     padding: 0.8em;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     font-size: 1rem;
     text-align: center;
     justify-content: center;
@@ -83,23 +77,36 @@ body {
 /*--- STYLE: MAIN CONTENT ---*/
 main {
     flex: 1;
-    clear: both;
     padding: 10% 0%;
 }   
 
 main section {
-    padding: 10% 20%;
+    padding: 10% 15%;
 }
 
-main .header-title-section {
+.header-title-section {
     padding: 2%;
     margin-bottom: 5%;
-    font-size: 1.8rem;
-    background-color: rgb(5,5,5);
+    font-size: 2rem;
+    border-bottom: 5px solid rgb(200, 200, 200);
     width: 100%;
 }
 
+/*--- ABOUT ME ---*/
+
 #about-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#about-me h1 {
+    flex: 1;
+    width: 100%;
+}
+
+#about-me .about-me-container {
+    flex: 1;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -127,8 +134,9 @@ main .header-title-section {
 }
 
 .summary-container {
+    display: block;
     flex: 1;
-    background: black url("../assets/pic-placeholder-avatar.jpeg") no-repeat center center;
+    background: black url("../assets/avatar.jpg") no-repeat center center;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -138,19 +146,69 @@ main .header-title-section {
 }
 
 .summary-container p {
-    display: none;
+    display: block;
+    opacity: 0;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: justify;
-    font-size: 1.2rem;
+    font-size: 100%;
     padding: 10%;
-    margin: 0;
-    top: calc(100% - 450px);
+    margin-top: 60%;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 1s ease;
 }
 
 .summary-container:hover p {
-    display: block;
+    opacity: 3;
 }
+
+/*--- EDUCATION BACKGROUND SECTION ---*/
+#education-background {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#education-background h1, #education-background .education-content-container {
+    flex: 1;
+}
+
+.education-content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.i-education-background, .i-degree-attainment {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.i-education-background {
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 25px;
+    background: black url("../assets/hcc-picture.jpg") no-repeat center center;
+    background-size: cover;
+    height: 660px;
+    width: 1080px;
+    padding: 0;
+    margin: 0;
+}
+
+.i-education-background .background-content {
+    width: 40%;
+    padding: 10% 5%;
+    margin-left: 30%;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
 
 footer {
     flex: 1;
@@ -163,6 +221,63 @@ footer {
     font-size: 0.8rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .menu-bar{
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+    .menu-title, .menu-option{
+        flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+    }
+
+    .menu-title {
+        padding-bottom: 1%;
+    }
+ 
+    .menu-option ul {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-option ul li {
+        flex: 1;
+    }
+
+    .menu-option ul li a {
+        font-size: 1rem;
+    }
+
+    .header-title-section {
+        font-size: 1.5rem;
+        border-bottom: 2px solid;
+    }
     
+    main {
+        padding: 20% 0;
+    }
+
+    #about-me .about-me-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about-me-container .summary-container{
+        flex: 1;
+        width: 100%;
+        min-height: 720px;     
+    }
+
+    .about-me-container .summary-container p{
+        position:static;
+        opacity: 3;
+        margin-top: 100%;  
+    }
 }
