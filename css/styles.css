@@ -27,6 +27,7 @@ body {
     padding: 25px 10px 3px 10px;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    z-index: 1000;
 }
 
 .menu-title {
@@ -112,56 +113,70 @@ main section {
     width: 100%;
 }
 
-.content-container {
+.author-info-container {
     flex: 1;
     padding: 15% 5%;
 }
 
-.content-container .author-name {
+.author-info-container .author-name {
     font-size: 2.5rem;
     text-decoration: underline rgb(150, 150, 150);
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 }
 
-.content-container .author-degree {
+.author-info-container .author-degree {
     font-size: 1.3rem;
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 }
 
-.content-container .author-job {
+.author-info-container .author-job {
     font-size: 1rem;
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 }
-
-.summary-container {
-    display: block;
+/*--- PROFILE CARD ---*/
+.profile-card {
     flex: 1;
-    background: black url("../assets/avatar.jpg") no-repeat center center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 720px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    background-size: cover;
-}
-
-.summary-container p {
-    display: block;
-    opacity: 0;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: justify;
-    font-size: 100%;
-    padding: 10%;
-    margin-top: 60%;
-    height: 60%;
-    width: 100%;
+    width: 480px;
+    height: 720px;
+    border-radius: 15px;
     overflow: hidden;
-    transition: opacity 1s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    cursor: pointer;
+    z-index: 1;
 }
 
-.summary-container:hover p {
-    opacity: 3;
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+.profile-card .overlay-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 3s ease;
+    display: flex;
+    text-align: justify;
+    padding: 10%;
+    margin-top: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.profile-card:hover .overlay-container {
+    opacity: 1;
+}
+
+.author-bio {
+    font-size: 1.2rem;
 }
 
 /*--- EDUCATION BACKGROUND SECTION ---*/
@@ -169,46 +184,87 @@ main section {
     display: flex;
     flex-direction: column;
     background-color: black;
-}
-
-#education-background h1, #education-background .education-content-container {
-    flex: 1;
-}
-
-.education-content-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.i-education-background, .i-degree-attainment {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
     width: 100%;
 }
 
+#education-background h1, #education-background article {
+    flex: 1;
+}
+
 .i-education-background {
-    border: 1px solid rgba(0,0,0,0);
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(200,200,200);
+    margin: 5% 15%;
+    border: 5px solid rgb(15,15,15);
     border-radius: 25px;
-    background: black url("../assets/hcc-picture.jpg") no-repeat center center;
-    background-size: cover;
-    height: 660px;
-    width: 1080px;
-    padding: 0;
-    margin: 0;
+    align-items: center;
 }
 
-.i-education-background .background-content {
-    width: 40%;
-    padding: 10% 5%;
-    margin-left: 30%;
+.school-img-container {
+    flex: 1;
+    position: relative;
+    min-width: 480px;
+    min-height: 720px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.8);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.school-img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    display: block;
+}
+
+.school-img-container .overlay-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 3s ease;
+    display: flex;
+    text-align: justify;
+    padding: 10%;
+    margin-top: 70%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.school-img-container:hover .overlay-container {
+    opacity: 1;
+}
+
+.school-desc {
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
+.course-degree-container {
+    flex: 1;
+    padding: 5%;
+}
 
+.course-degree-container h2 {
+    font-size: 2rem;
+    color: rgb(0, 112, 186);
+}
 
+.course-degree-container h4 {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+}
 
+.course-degree-container p {
+    font-size: 1rem;
+    color: rgb(40, 40, 40);
+}
 
 footer {
     flex: 1;
@@ -269,15 +325,12 @@ footer {
         margin: 0;
     }
     
-    .about-me-container .summary-container{
+    .about-me-container .profile-card{
         flex: 1;
-        width: 100%;
-        min-height: 720px;     
+        width: 100%;  
     }
 
-    .about-me-container .summary-container p{
-        position:static;
+    .overlay-container {
         opacity: 3;
-        margin-top: 100%;  
     }
 }
