@@ -32,48 +32,77 @@
         <!-- SECTION I: ABOUT ME -->
         <section id="about-me">
             <h1>ABOUT ME</h1>
-            <div>
-                <p>Lance Andrei C. Sombillo</p>
-                <p>Bachelor of Science in Computer Engineering</p>
-                <p>Hardware Developer/Web Developer/Mobile App Developer</p>
-                <a href="assets/lance-resume.pdf">RESUME</a> 
-            </div>
-            <div>
-                <img src="assets/avatar.jpg" alt="lance-photo" />
-                <div>
-                    <h6>Greetings</h6>
-                    <p>I am Lance Andrei C. Sombillo, a recent 
-                        graduate under the degree of Bachelor of 
-                        Science in Computer Enginerring in Holy 
-                        Cross College of Sta Ana, Pampanga, 
-                        Philippines, truly a proud crucian.</p>
-                    
-                    <p>I am quite flexible in both Hardware and 
-                        Software field. Became a Tech Entusiast 
-                        because one of my hobby aims on building 
-                        simple Do-it-Yourself technologies that can
-                        be either useful into day-to-day use or 
-                        for solely for enterntainment. I have 
-                        experienced becoming a Hardware Developer,
-                        and it was a true passion. On the other 
-                        hand, I am a proud programmer, both 
-                        capable on Web Development and Mobile 
-                        App Development.</p>
+            <div class="content-container">
+                <div class="personal-info">
+                    <p class="name">Lance Andrei C. Sombillo</p>
+                    <p class="degree">Bachelor of Science in Computer Engineering</p>
+                    <p class="profession">Hardware Developer/Web Developer/Mobile App Developer</p>
                 </div>
-            </div>
+                <div class="personal-thoughts">
+                    <div class="card">
+                        <img src="assets/avatar.jpg" alt="lance-photo" />
+                        <div class="card-details">
+                            <h6>Greetings</h6>
+                            <p>I am Lance Andrei C. Sombillo, a recent 
+                                graduate under the degree of Bachelor of 
+                                Science in Computer Enginerring in Holy 
+                                Cross College of Sta Ana, Pampanga, 
+                                Philippines, truly a proud crucian.</p>
+                            
+                            <p>I am versatile in both Hardware and 
+                                Software field. Became a Tech Entusiast 
+                                because one of my hobbies are building 
+                                simple Do-it-Yourself technologies that can
+                                be either useful into day-to-day use or 
+                                for solely for enterntainment. I have 
+                                experienced becoming a Hardware Developer,
+                                and it was a true passion. On the other 
+                                hand, I am a proud programmer, both 
+                                capable on Web Development and Mobile 
+                                App Development.</p>
+                        </div>
+                        <div class="view-resume card-button">
+                            <a href="assets/lance-resume.pdf">VIEW RESUME</a>
+                        </div>
+                        <p class="hover-tooltip">Try hovering your cursor here!</p>
+                    </div>
+                </div>
+            </div> 
         </section>
 
         <!-- SECTION II: EXPERIENCE BACKGROUND -->
-        <section>
+        <section id="experience">
             <h1>EXPERIENCE BACKGROUND</h1>
-            <div>
-                <img src="assets/a2k_logo.jpg" alt="a2k-logo"/>
-                <div>
-                    <h3>Hardware Developer - OJT</h3>
-                    <p>June 2024 - July 2024</p>
-                    <div>
-                        <p>
-                            Description...
+            <div class="content-container">
+                <div class="experience-card">
+                    <div class="img-container">
+                        <img id="a2k-ojt-img"src="assets/A2K-ojt.jpg" alt="a2k-ojt-img" height="480" width="360"/>
+                        <img id="a2k-logo" src="assets/a2k_logo.jpg" alt="a2k-logo"/>
+                    </div>
+                    <div class="experience-details">
+                        <h1 class="work-location">A2K Group</h1>
+                        <h3 class="work-position">Hardware Developer - OJT</h3>
+                        <p class="work-duration">June 2024 - July 2024</p>
+                        <h3 class="summary">Summary</h3>
+                        <p class="summary content">
+                            The A2K Group is a company I attended for my
+                            On-the-Job Training (OJT) course program as a Hardware Developer.
+                            It is a company that focuses on empowering student together with
+                            the leaders of the future through digitalization here in the Philippines.
+                        </p>
+                        <h3 class="roles-responsibilities">Roles and Responsibilities</h3>
+                        <p class="roles-responsibilities content">
+                            We worked as a three-man team in developing an innovative hardware project.
+                            Tasked to be the Lead Hardware Developer of the team, the following is the 
+                            responsibilities I worked on:
+                            <ul>
+                                <li>I designed the circuit diagram and the PCB layout of the project using EasyEDA software.</li>
+                                <li>Supported on the assembly of the components, drafted the hardware design.</li>
+                                <li>Collaborated with my teammates to integrate the hardware with the software
+                                part of the project, ensuring seamless functionality and user experience.</li>
+                                <li>Did Scrum Meetings to the Team Lead about the challenges we faced.</li>
+                                <li>Indicate all the progress and challenges in the project using the Jira software.</li>
+                            </ul>
                         </p>
                     </div>
                 </div>
@@ -81,7 +110,7 @@
         </section>
         
         <!-- SECTION III: PERSONAL PROJECTS -->
-        <section>
+        <section id="my-projects">
             <h1>PERSONAL PROJECTS</h1>
             <div>
                 <p>Filter it by:</p>
@@ -99,7 +128,7 @@
         </section>
 
         <!-- SECTION IV: CHARACTER SKILLS -->
-        <section>
+        <section id="my-skills">
             <h1>CHARACTER SKILLS</h1>
             <div>
                 <div>
