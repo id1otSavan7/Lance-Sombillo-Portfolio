@@ -21,11 +21,11 @@ html {
     --lighter-background-color: rgb(60,60,60);
 
     /*Utility Variables for Cards*/
-    --card-background-color: rgba(30, 30, 30, 0.8);
+    --card-background-color: rgba(25,25,25,0.8);
     --card-font-color: rgb(220,220,220);
     --card-button-font-color: rgb(210,210,210);
     --card-button-background-color: rgb(0, 95, 240);
-    --card-button-hover-background-color: rgb(50,50,50);
+    --card-button-hover-background-color: rgb(0,5,180);
 }
 
 body {
@@ -48,6 +48,74 @@ header {
     align-items: center;
 }
 
+/* --- CARD STYLESHEETS --- */
+
+.card {
+    max-height: 80vh;
+    height: 75vh;
+    min-height: 60vh;
+    max-width: 25vw;
+    width: 25vw;
+    min-width: 20vw;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.card img {
+    background-color: rgb(40,40,40);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--card-background-color);
+    color: var(--card-font-color);
+    padding: 2em 1em 2em 1em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: justify;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-x: auto;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.card-button {  
+    background-color: var(--card-button-background-color);
+    color: var(--default-font-color);
+    padding: 1em;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    margin: 5% 30% 0 30%;
+}
+
+.card:hover .card-details{
+    opacity: 1;  
+}
+
+.card-button:hover {
+    background-color: var(--card-button-hover-background-color);
+}
+
+/* ----- PAGE STYLESHEETS ----- */
+
 .menu-title {
     flex: 1;
     max-width: 20%;
@@ -62,7 +130,6 @@ header {
 
 .menu-navigation {
     flex: 1;
-    background-color: red;
     max-width: 80%;
 }
 
@@ -70,7 +137,6 @@ header {
     display: flex;
     list-style-type: none;
     margin: 0em 2em;
-    background-color: blue;
     justify-content: flex-end;
 }
 
@@ -110,19 +176,20 @@ section h1 {
 section .content-container{
     flex: 1;
     display: flex;
+    margin: 2em 10%;
+    max-width: 100%;
+}
+
+#about-me .content-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 2em 10%;
-    max-width: 100%;
 }
 
 .content-container .personal-thoughts {
     flex: 1;
     max-width: 50%;
     justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
     padding: 2em;
     align-items: flex-start;
 }
@@ -134,70 +201,9 @@ section .content-container{
 
 .personal-thoughts h6{
     flex: 1;
-    font-size: var(--subheader-font-size);
+    font-size: var(--third-header-font-size);
     padding: 0;
     margin: 0;
-}
-
-.card {
-    height: 720px;
-    max-width: 480px;
-    border-radius: 25px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.card img {
-    background-color: rgb(40,40,40);
-    width: 100%;
-    height: 100%;
-    max-height: 720px;
-    max-width: 480px;
-    display: block;
-    align-items: center;
-    border-radius: 25px;
-    object-fit: cover;
-}
-
-.card-details {
-    position: absolute;
-    background-color: var(--card-background-color);
-    color: var(--card-font-color);
-    padding: 2em 1em 5em 1em;
-    opacity: 0;
-    z-index: 100;
-    transition: opacity 1s ease-in-out;
-    bottom: 0%;
-    text-align: justify;
-}
-
-.card-button {
-    position: absolute;
-    bottom: 3%;
-    right: 30%;
-    left: 30%;
-    background-color: var(--card-button-background-color);
-    padding: 1em;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 100;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-
-.card-button a{
-    color: var(--card-button-font-color);
-    font-size: var(--default-font-size);
-    text-decoration: none;
-}
-
-.card:hover .card-details, .card:hover .card-button {
-    opacity: 1;  
 }
 
 .hover-tooltip {
@@ -213,11 +219,6 @@ section .content-container{
     padding: 0.2em;
     border-radius: 5px;
     opacity: 0.6;
-}
-
-.personal-thoughts .card-details .view-resume a{
-    text-decoration: none;
-    color: var(--card-button-font-color);
 }
 
 .content-container .personal-info {
@@ -251,12 +252,13 @@ section .content-container{
 
 .content-container .experience-card {
     flex: 1;
-    background-color: var(--card-background-color);
-    border-radius: 20px;
-    padding: 2em;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--primary-background-color);
+    border-radius: 25px;
+    padding: 1em;
+    box-shadow: 5px 10px 25px 20px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: row;
+    height: auto;
 }
 
 .img-container {
@@ -281,19 +283,19 @@ section .content-container{
 
 .img-container #a2k-ojt-img {
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 25px;
 }
 
 .experience-card .experience-details {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    margin: 0 2.5% 0 2.5%;
 }
 
 .experience-details .work-location{
     flex: 0;
-    font-size: var(--primary-header-font-size);
+    font-size: var(--second-header-font-size);
     border-bottom: none;
     margin: 0;
     padding: 0;
@@ -325,9 +327,134 @@ section .content-container{
     text-align: justify;
     font-size: var(--default-font-size);
 }
+#my-projects .content-container {
+    flex-direction: column;
+    align-content: flex-start;
+    text-align: justify;
+    justify-content: flex-start;
+    margin: 1em 0em;
+}
 
+.content-container .filter-option {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start center;
+    padding: 0 0 0 1em;
+    width: 100%;
+}
+.filter-option p {
+    flex: 1;
+    font-size: var(--default-font-size);
+    padding: 0.5em;
+    max-width: 5%;
+    font-style: bold;
+}
 
+.filter-option .filter-button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 95%;
+}
+.filter-button-container button {
+    flex: 0 0 8em;
+    margin-right: 0.3em;
+    padding: 0.5em 0em;
+    text-align: center;
+    background-color: var(--card-button-background-color);
+    border: none;
+    color: var(--card-button-font-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: var(--default-font-size);
+    transition: background-color 0.5s ease-in-out;
+}
 
+.filter-button-container button:hover {
+    background-color: var(--card-button-hover-background-color);
+}
+
+.project-gallery {
+    flex: 1;
+    margin: 0em 1.5em;
+    gap: 1em; 
+    display: flex;     
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior:smooth; 
+    anchor-name: --gallery;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+}
+
+.project-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.project-gallery::scroll-button(right), .project-gallery::scroll-button(left) {
+    content: '▶';
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    border: none;
+    background-color: rgba(0,0,0,0.01);
+    color: var(--default-font-color);
+    font-size: var(--second-header-font-size);
+    font-weight:900;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --gallery;
+    position-area: right center;
+    translate: -40%;
+}
+
+.project-gallery::scroll-button(left) {
+    content: '◀';
+    position-area: left center;
+    translate: 40%;
+}
+
+.project-gallery::scroll-button(right):hover, .project-gallery::scroll-button(left):hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.project-gallery::scroll-button(right):disabled, .project-gallery::scroll-button(left):disabled {
+    background-color: rgba(0,0,0,0);
+    color: rgba(220,220,220,0.5);
+    cursor: default;    
+}
+
+.project-gallery .card {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    flex: 0 0 20vw;
+    height: 60vh;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.project .card-details {    
+    white-space: normal;
+}
+
+.project .card-details h6 {
+    flex: 1 ;
+    font-size: var(--subheader-font-size);
+}
+
+.project .card-details p {
+    flex: 1;
+    font-size: var(--default-font-size);
+    padding: 0;
+    margin: 0;
+}
+
+.project .card-button {
+    margin: 10% 25% 0 25%;
+}
 
 footer {
     background-color: var(--darker-background-color);
@@ -336,6 +463,8 @@ footer {
     text-align: center;
     padding: 100px;
 }
+
+
 
 @media screen {
     
