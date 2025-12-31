@@ -1,0 +1,10 @@
+@import url(design.css);
+@import url(root.css);
+
+footer {
+    background-color: var(--darker-background-color);
+    color: var(--default-font-color);
+    align-content: center;
+    text-align: center;
+    padding: 100px;
+}

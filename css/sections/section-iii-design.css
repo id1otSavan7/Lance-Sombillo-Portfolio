@@ -1,0 +1,132 @@
+@import url(../design.css);
+@import url(../root.css);
+@import url(../card.css);
+
+#my-projects .content-container {
+    flex-direction: column;
+    align-content: flex-start;
+    text-align: justify;
+    justify-content: flex-start;
+    margin: 1em 0em;
+}
+
+.content-container .filter-option {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start center;
+    padding: 0 0 0 1em;
+    width: 100%;
+}
+.filter-option p {
+    flex: 1;
+    font-size: var(--default-font-size);
+    padding: 0.5em;
+    max-width: 5%;
+    font-style: bold;
+}
+
+.filter-option .filter-button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 95%;
+}
+.filter-button-container button {
+    flex: 0 0 8em;
+    margin-right: 0.3em;
+    padding: 0.5em 0em;
+    text-align: center;
+    background-color: var(--card-button-background-color);
+    border: none;
+    color: var(--card-button-font-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: var(--default-font-size);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.filter-button-container button:hover {
+    background-color: var(--card-button-hover-background-color);
+}
+
+.project-gallery {
+    flex: 1;
+    margin: 0em 1.5em;
+    gap: 1em; 
+    display: flex;     
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior:smooth; 
+    anchor-name: --gallery;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+}
+
+.project-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.project-gallery::scroll-button(right), .project-gallery::scroll-button(left) {
+    content: '▶';
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    border: none;
+    background-color: rgba(0,0,0,0.01);
+    color: var(--default-font-color);
+    font-size: var(--second-header-font-size);
+    font-weight:900;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --gallery;
+    position-area: right center;
+    translate: -40%;
+}
+
+.project-gallery::scroll-button(left) {
+    content: '◀';
+    position-area: left center;
+    translate: 40%;
+}
+
+.project-gallery::scroll-button(right):hover, .project-gallery::scroll-button(left):hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.project-gallery::scroll-button(right):disabled, .project-gallery::scroll-button(left):disabled {
+    background-color: rgba(0,0,0,0);
+    color: rgba(220,220,220,0.5);
+    cursor: default;    
+}
+
+.project-gallery .card {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    flex: 0 0 20vw;
+    height: 60vh;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.project .card-details {    
+    white-space: normal;
+}
+
+.project .card-details h6 {
+    flex: 1 ;
+    font-size: var(--subheader-font-size);
+}
+
+.project .card-details p {
+    flex: 1;
+    font-size: var(--default-font-size);
+    padding: 0;
+    margin: 0;
+}
+
+.project .card-button {
+    margin: 10% 25% 0 25%;
+}

@@ -1,0 +1,54 @@
+@import url(root.css);
+@import url(header.css);
+@import url(sections/section-i-design.css);
+@import url(sections/section-ii-design.css);
+@import url(sections/section-iii-design.css);
+@import url(sections/section-iv-design.css);
+@import url(footer.css);
+@import url(card.css);
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: auto;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--default-font-color);
+    background-color: var(--lighter-background-color);
+}
+
+header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+    max-width: 100%;
+    background-color: var(--darker-background-color);
+    align-items: center;
+}
+
+section {
+    margin: 1em 0em 1em 0em;
+    padding: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+section h1 {
+    flex: 1;
+    border-bottom: 0.1em solid var(--default-font-color);
+    padding: 0.1em 0em 0.1em 0.2em;
+    font-size: var(--primary-header-font-size);
+}
+
+section .content-container{
+    flex: 1;
+    display: flex;
+    margin: 2em 10%;
+    max-width: 100%;
+}
