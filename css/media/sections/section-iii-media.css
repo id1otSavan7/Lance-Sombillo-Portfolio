@@ -2,37 +2,48 @@
 @import url(../utils/card-media.css);
 
 @media (max-width: 500px) {
+    #my-projects .content-container {
+        margin: 0vh 0vw;
+    }
+
     .content-container .filter-option {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start center;
-        padding: 0 0 0 1vh;
+        padding-left: 0.5vh;
         width: 100%;
     }
 
     .filter-option p {
-        flex: 1;
         font-size: var(--default-font-size);
         padding: 1vh;
-        max-width: 5%;
-        font-style: bold;
+        max-width: 10%;
     }
 
     .filter-button-container button {
-        flex: 0 0 20vw;
+        flex: 0 0 15vw;
         margin-right: 0.5vw;
-        padding: 1vh 0vw;
+        padding: 0.5vh 0vw;
     }
 
     .project-gallery {
-        margin: 0vh 0.5vw;
-        padding: 2.5vh 2.5vw;
-        gap: 1vw;
+        margin: 0vh 8vw;
+        padding: 1vh 5vw;
+        gap: 2vw;
+    }
+
+    .project-gallery::scroll-button(right),
+    .project-gallery::scroll-button(left) {
+        height: 60vh;
+        width: 10vw;
+        translate: -20%;
+    }
+
+    .project-gallery::scroll-button(left) {
+        translate: 20%;
     }
 
     .project-gallery .card {
-        flex: 0 0 35.5vw;
+        flex: 0 0 50vw;
+        min-width: 60vw;
+        min-height: 40vh !important;
         transition: transform 0.3s ease-in;
     }
 

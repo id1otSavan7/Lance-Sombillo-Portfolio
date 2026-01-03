@@ -1,9 +1,9 @@
 @import url(../utils/root-media.css);
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     #experience .content-container {
         border-radius: 15px;
-        padding: 5vh 5vw;
+        padding: 2vh 5vw;
         box-shadow: 5px 10px 25px 20px rgba(0, 0, 0, 0.5);
         flex-direction: column;
     }
@@ -16,15 +16,17 @@
 
     .experience-card .img-container {
         width: auto;
-        min-width: 60vw;
-        height: 40vh;
+        min-width: 65vw;
+        height: 25vh;
         border-radius: 15px;
     }
 
     #a2k-logo {
-        translate: -75% -75%;
-        max-width: 15vw;
-        max-height: 15vh;
+        translate: -80% -80%;
+        width: auto;
+        min-width: 20vw;
+        height: auto;
+        min-height: 10vh;
     }
 
     .content-container .experience-details {

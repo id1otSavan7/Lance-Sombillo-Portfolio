@@ -1,6 +1,5 @@
-@import url(../design.css);
-@import url(../root.css);
-@import url(../card.css);
+@import url(../body/barrel-layout.css);
+@import url(../util/barrel-util.css);
 
 #my-projects .content-container {
     flex-direction: column;

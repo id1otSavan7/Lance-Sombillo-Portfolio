@@ -1,15 +1,13 @@
 @import url(../utils/root-media.css);
 
-@media (max-width: 500px) { 
+@media (max-width: 480px) { 
     header {
         flex-direction: column !important;
-        padding: 2vh 0 2vh 1vw !important;
-        align-items: start;
-        justify-items: start;
+        padding-bottom: 2vh;
     }
 
     section {
-        padding: 15vh 10vw 0vh 10vw !important;
+        padding: 12vh 10vw 0vh 10vw !important;
     }
 
     section h1 {

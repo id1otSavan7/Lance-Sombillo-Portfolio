@@ -1,5 +1,5 @@
-@import url(design.css);
-@import url(root.css);
+@import url(layout.css);
+@import url(../util/root.css);
 
 /* ----- HEADER ELEMENT ----- */
 
@@ -33,7 +33,7 @@
 }
 
 .menu-navigation ul li a {
-    max-width: 25vw;
+    max-width: 20vw;
     padding: 1.5vh 4vw;
     text-align: center;
     text-decoration: none;

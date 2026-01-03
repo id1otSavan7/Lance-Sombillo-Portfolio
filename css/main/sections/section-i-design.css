@@ -1,6 +1,5 @@
-@import url(../design.css);
-@import url(../root.css);
-@import url(../card.css);
+@import url(../body/barrel-layout.css);
+@import url(../util/barrel-util.css);
 
 #about-me .content-container {
     flex-direction: row;
@@ -53,7 +52,7 @@
 
 .personal-info p {
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 .personal-info .name {

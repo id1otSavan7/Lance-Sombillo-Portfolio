@@ -1,6 +1,6 @@
 @import url(../utils/root-media.css);
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .menu-title {
         flex: 1;
         display: flex;
@@ -26,17 +26,17 @@
     .menu-navigation ul {
         flex-direction: row;
         gap: 0.2vw;
-        justify-items: center;
-        align-items: center;
+        margin: 0.5vw;
     }
 
     .menu-navigation ul li {
         flex: 1;
-        width: 100%;
+        float: none;
     }
 
     .menu-navigation ul li a {
-        max-width: 25vw;
-        padding: 1.5vh 5vw;
+        max-width: 20vw;
+        padding: 1vh 6.8vw;
+        font-size: var(--default-font-size);
     }
 }
