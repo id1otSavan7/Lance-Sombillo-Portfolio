@@ -1,6 +1,6 @@
 @import url(root-media.css);
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
     .card {
         max-height: 62vh;
         height: 60vh;

@@ -1,7 +1,7 @@
 @import url(../utils/root-media.css);
 @import url(../utils/card-media.css);
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
     .content-container .filter-option {
         flex: 1;
         display: flex;

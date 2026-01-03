@@ -1,6 +1,6 @@
 @import url(../utils/root-media.css);
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
     .menu-title {
         flex: 1;
         display: flex;
