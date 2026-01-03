@@ -1,0 +1,60 @@
+@import url(../utils/root-media.css);
+
+@media (max-width: 800px) {
+    #experience .content-container {
+        border-radius: 15px;
+        padding: 5vh 5vw;
+        box-shadow: 5px 10px 25px 20px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+    }
+
+
+    .content-container .experience-card {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .experience-card .img-container {
+        width: auto;
+        min-width: 60vw;
+        height: 40vh;
+        border-radius: 15px;
+    }
+
+    #a2k-logo {
+        translate: -75% -75%;
+        max-width: 15vw;
+        max-height: 15vh;
+    }
+
+    .content-container .experience-details {
+        max-width: 100vw;
+        margin-top: 2vh;
+    }
+
+    .experience-details .work-location {
+        font-size: var(--second-header-font-size);
+    }
+
+    .experience-details .work-position {
+        font-size: var(--third-header-font-size);
+    }
+
+    .experience-details .work-duration {
+        font-size: var(--subcontent-font-size);
+    }
+
+    .summary,
+    .roles-responsibilities {
+        flex: 0;
+        margin: 1em 0em 0.1em 0em;
+    }
+
+    .exp-content {
+        font-size: var(--default-font-size) !important;
+    }
+
+    ::marker {
+        font-size: var(--default-font-size);
+    }
+}

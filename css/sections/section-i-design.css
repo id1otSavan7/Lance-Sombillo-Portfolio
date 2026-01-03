@@ -10,9 +10,9 @@
 
 .content-container .personal-thoughts {
     flex: 1;
-    max-width: 50%;
+    max-width: 50vw;
     justify-content: flex-start;
-    padding: 2em;
+    padding: 2vh 2vw 2vh 2vw;
     align-items: flex-start;
 }
 
@@ -38,17 +38,17 @@
     font-size: var(--subcontent-font-size);
     color: var(--subcontent-font-color);
     background-color: var(--darker-background-color);
-    padding: 0.2em;
+    padding: 1vh 1vw;
     border-radius: 5px;
     opacity: 0.6;
 }
 
 .content-container .personal-info {
     flex: 1;
-    max-width: 50%;
+    max-width: 50vw;
     display: flex;
     flex-direction: column;
-    padding: 5em;
+    padding: 5vh 2.5vw;
 }
 
 .personal-info p {
@@ -68,6 +68,6 @@
 {
     font-size: var(--default-font-size);
     font-style: italic;
-    padding: 0.2em;
-    margin: 0.2em;
+    padding: 0.25vh 0.25vw;
+    margin: 0.25vh 0.25vw;
 }

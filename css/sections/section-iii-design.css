@@ -7,7 +7,7 @@
     align-content: flex-start;
     text-align: justify;
     justify-content: flex-start;
-    margin: 1em 0em;
+    margin: 2vh 1vw;
 }
 
 .content-container .filter-option {
@@ -15,13 +15,13 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start center;
-    padding: 0 0 0 1em;
+    padding: 0 0 0 1vh;
     width: 100%;
 }
 .filter-option p {
     flex: 1;
     font-size: var(--default-font-size);
-    padding: 0.5em;
+    padding: 1vh;
     max-width: 5%;
     font-style: bold;
 }
@@ -34,9 +34,9 @@
     max-width: 95%;
 }
 .filter-button-container button {
-    flex: 0 0 8em;
-    margin-right: 0.3em;
-    padding: 0.5em 0em;
+    flex: 0 0 10vw;
+    margin-right: 1vw;
+    padding: 1vh 0vw;
     text-align: center;
     background-color: var(--card-button-background-color);
     border: none;
@@ -53,8 +53,9 @@
 
 .project-gallery {
     flex: 1;
-    margin: 0em 1.5em;
-    gap: 1em; 
+    margin: 0vh 0.1vw;
+    padding: 2.5vh 2.5vw;
+    gap: 0.8vw; 
     display: flex;     
     flex-direction: row;
     white-space: nowrap;
@@ -72,8 +73,8 @@
 
 .project-gallery::scroll-button(right), .project-gallery::scroll-button(left) {
     content: '▶';
-    height: 2em;
-    width: 2em;
+    height: 10vh;
+    width: 5vw;
     text-align: center;
     border: none;
     background-color: rgba(0,0,0,0.01);
@@ -105,10 +106,15 @@
 .project-gallery .card {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    flex: 0 0 20vw;
+    flex: 0 0 18.5vw;
     height: 60vh;
     border-radius: 25px;
-    box-shadow: none;
+    box-shadow: none;   
+    transition: transform 0.5s ease-in;
+}
+
+.project-gallery .card:hover{
+    transform: scale(1.03);
 }
 
 .project .card-details {    
@@ -118,6 +124,7 @@
 .project .card-details h6 {
     flex: 1 ;
     font-size: var(--subheader-font-size);
+    margin: 1.5vh 0vw;
 }
 
 .project .card-details p {
@@ -128,5 +135,6 @@
 }
 
 .project .card-button {
-    margin: 10% 25% 0 25%;
+    font-size: var(--subcontent-font-size) !important;
+    margin: 10% 23% 0 23%;
 }

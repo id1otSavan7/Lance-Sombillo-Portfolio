@@ -5,7 +5,7 @@
 
 .menu-title {
     flex: 1;
-    max-width: 20%;
+    max-width: 20vw;
 }
 
 .menu-title a {
@@ -17,24 +17,24 @@
 
 .menu-navigation {
     flex: 1;
-    max-width: 80%;
+    max-width: 80vw;
 }
 
 .menu-navigation ul {
     display: flex;
     list-style-type: none;
-    margin: 0em 2em;
+    margin: 0 1vw;
     justify-content: flex-end;
 }
 
 .menu-navigation ul li {
     float: right;
-    margin-left: 0.5em; 
+    margin-left: 0.4vw; 
 }
 
 .menu-navigation ul li a {
-    max-width: 25%;
-    padding: 1em 2em;
+    max-width: 25vw;
+    padding: 1.5vh 4vw;
     text-align: center;
     text-decoration: none;
     color: var(--default-font-color);
