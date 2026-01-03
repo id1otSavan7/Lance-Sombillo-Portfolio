@@ -28,7 +28,7 @@ header {
     display: flex;
     flex-direction: row;
     padding: 2vh 0 2vh 1vw;
-    max-width: 100vw;
+    max-width: 100%;
     background-color: var(--darker-background-color);
     align-items: center;
 }
