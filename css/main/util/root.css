@@ -1,14 +1,16 @@
 :root {
     /*Font sizes*/
     --default-font-size: 1rem;
+    --icon-link-size: 1.6rem; /*Size was based on font*/
     --primary-header-font-size: 2.6rem;
     --second-header-font-size: 2.2rem;
     --third-header-font-size: 1.8rem;
+    --subheader-font-size: 1.4rem;
     --subcontent-font-size: 0.8rem;
 
     /*Font colors*/
     --default-font-color: rgb(220,220,220);
-    --subcontent-font-color: rgb(180,180,180);
+    --subcontent-font-color: rgb(150, 150, 150);
 
     /*Background Colors*/
     --darker-background-color: rgb(10,10,10);

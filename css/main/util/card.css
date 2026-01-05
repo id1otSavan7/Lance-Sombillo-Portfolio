@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     object-fit: cover;
+    font-style: italic;
 }
 
 .card-details {
@@ -52,7 +53,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease;
     margin: 5% 30% 0 30%;
 }
 

@@ -25,7 +25,7 @@
 
     .project-gallery {
         margin: 0vh 8vw;
-        padding: 1vh 5vw;
+        padding: 1vh 6vw;
         gap: 2vw;
     }
 
@@ -41,10 +41,14 @@
     }
 
     .project-gallery .card {
-        flex: 0 0 50vw;
-        min-width: 60vw;
+        flex: 0 0 40vw;
+        min-width: 56.5vw;
         min-height: 40vh !important;
-        transition: transform 0.3s ease-in;
+        transition: none;
+    }
+
+    .project-gallery .card:hover{
+        transform: scale(1);
     }
 
     .project .card-button {

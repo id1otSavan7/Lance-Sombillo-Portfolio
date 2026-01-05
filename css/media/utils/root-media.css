@@ -1,10 +1,11 @@
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     :root {
         /*Font sizes*/
-        --default-font-size: 0.6rem;
+        --default-font-size: 0.8rem;
         --primary-header-font-size: 1.8rem;
         --second-header-font-size: 1.4rem;
         --third-header-font-size: 1.1rem;
-        --subcontent-font-size: 0.5rem;
+        --subheader-font-size: 1rem;
+        --subcontent-font-size: 0.65rem;
     }
 }

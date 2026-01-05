@@ -1,9 +1,9 @@
 @import url(../utils/root-media.css);
 
-@media (max-width: 480px) { 
+@media (max-width: 500px) { 
     header {
         flex-direction: column !important;
-        padding-bottom: 2vh;
+        padding-bottom: 1.5vh;
     }
 
     section {
