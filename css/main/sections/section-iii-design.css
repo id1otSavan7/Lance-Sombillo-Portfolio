@@ -112,6 +112,24 @@
     transition: transform 0.5s ease-in;
 }
 
+.project-gallery .card .img-wrapper {
+    display: flex;
+    min-width: 100%;
+}
+
+.project-gallery .card:hover .img-wrapper {
+    animation: slide 16s infinite;
+}
+
+
+
+.project-gallery .card img {
+    object-fit: fill;
+    margin: 0;
+    padding: 0;
+    transition: transform;
+}
+
 .project-gallery .card:hover{
     transform: scale(1.03);
 }
@@ -122,18 +140,41 @@
 
 .project .card-details h6 {
     flex: 1 ;
-    font-size: var(--subheader-font-size);
     margin: 1.5vh 0vw;
 }
 
 .project .card-details p {
     flex: 1;
-    font-size: var(--default-font-size);
     padding: 0;
     margin: 0;
 }
 
 .project .card-button {
-    font-size: var(--subcontent-font-size) !important;
     margin: 10% 23% 0 23%;
+}
+
+
+@keyframes slide {
+    0%  {
+        transform: translateX(0%);
+    }
+
+    16.5% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    49.5% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    79.5% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }

@@ -1,4 +1,4 @@
-@import url(root.css);
+@import url(../util/root.css);
 
 /* --- CARD STYLESHEETS --- */
 
@@ -43,11 +43,21 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
     cursor: default;
+    max-height: 75%;
+    min-height: 75%;
+}
+
+.card-details h6 {
+    font-size: var(--card-font-header);
+}
+.card-details p {
+    font-size: var(--card-font-size);
 }
 
 .card-button {  
     background-color: var(--card-button-background-color);
     color: var(--default-font-color);
+    font-size: var(--card-button-font-size);
     padding: 2vh 1vw;
     text-align: center;
     border: none;
