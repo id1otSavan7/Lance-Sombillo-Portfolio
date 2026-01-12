@@ -103,6 +103,7 @@
 }
 
 .project-gallery .card {
+    background-color: var(--card-background-color);
     scroll-snap-align: start;
     scroll-snap-stop: always;
     flex: 0 0 18.5vw;
@@ -121,9 +122,7 @@
     animation: slide 16s infinite;
 }
 
-
-
-.project-gallery .card img {
+.project-gallery .card .img-wrapper img {
     object-fit: fill;
     margin: 0;
     padding: 0;

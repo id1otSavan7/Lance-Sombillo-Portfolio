@@ -6,8 +6,6 @@ const hw_card = document.querySelectorAll(".hardware");
 
 let filter_option = 'all';
 
-
-
 function applyFilter(option) {
     switch (option) {
         case 'all':
